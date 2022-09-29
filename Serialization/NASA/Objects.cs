@@ -1,18 +1,15 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Serialization.NASA
+namespace Serialization.NASA;
+
+class Objects
 {
-    class Objects
-    {
-        [JsonProperty("links")]
-        public Links Links { get; set; }
+    [JsonProperty("links")]
+    public Links Links { get; set; }
 
-        [JsonProperty("element_count")]
-        public int Count { get; set; }
-    }
+    [JsonProperty("element_count")]
+    public int Count { get; set; }
+
+    [JsonProperty("near_earth_objects")]
+    public NearbyObjectHolderTopHolder NearEarthObjects { get; set; }
 }

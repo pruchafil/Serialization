@@ -1,23 +1,23 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Serialization.NASA;
+using System;
 using System.Net.Http;
-using System.Threading.Tasks;
 
-namespace Serialization
+namespace Serialization;
+
+internal class Program
 {
-    class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Runner r = new();
-            r.Run();
-            Console.ReadKey();
-        }
+        Runner r = new();
+        r.Run();
+        Console.ReadKey();
     }
 }
 
-class Runner
+internal class Runner
 {
-    const string uri = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=2xMpH3hY2Fyn0imx1BVyKqSstHw2TWXrXGq5IODk";
+    private const string uri = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=2xMpH3hY2Fyn0imx1BVyKqSstHw2TWXrXGq5IODk";
 
     public async void Run()
     {
@@ -30,8 +30,14 @@ class Runner
                 throw new HttpRequestException("Operation was not successful.");
 
             string res = await rm.Content.ReadAsStringAsync();
-
             Console.WriteLine(res);
+
+            Console.WriteLine();
+            Console.WriteLine("JSON:");
+
+            Objects o = JsonConvert.DeserializeObject<Objects>(res);
+            Console.WriteLine(o.Count);
+
         }
         catch (HttpRequestException ex)
         {
