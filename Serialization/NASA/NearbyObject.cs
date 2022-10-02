@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Linq;
 
 namespace Serialization.NASA;
 
@@ -33,4 +34,12 @@ class NearbyObject
 
     [JsonProperty("is_sentry_object")]
     public bool IsSentryObject { get; set; }
+
+    public override string ToString()
+    {
+        return $"NearbyObject: ((Links: {Links}); (ID: {ID}); (NeoID: {NeoID}); (Name: {Name}); " +
+            $"(NasaJPLURL: {NasaJPLURL}); (AbsoluteMagnitude: {AbsoluteMagnitude}); " +
+            $"(EstimatedDiameter: {EstimatedDiameter}); (PotenciallyHazardous: {PotenciallyHazardous}); " +
+            $"(Data: {string.Join<Data>("; ", Data)}); (IsSentryObject: {IsSentryObject}))";
+    }
 }

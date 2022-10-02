@@ -12,4 +12,9 @@ class Links
 
     [JsonProperty("self")]
     public string Self { get; set; }
+
+    public override string ToString()
+    {
+        return $"Links: ((Next: {Next}); (Previous: {Previous}); (Self: {Self}))";
+    }
 }

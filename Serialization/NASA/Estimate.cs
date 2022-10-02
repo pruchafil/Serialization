@@ -9,4 +9,9 @@ public class Estimate
 
     [JsonProperty("estimated_diameter_max")]
     public double Max { get; set; }
+
+    public override string ToString()
+    {
+        return $"Estimate: ((Min diameter: {Min}); (Max diameter: {Max}))";
+    }
 }

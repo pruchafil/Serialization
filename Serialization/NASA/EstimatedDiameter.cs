@@ -15,4 +15,10 @@ public class EstimatedDiameter
 
     [JsonProperty("feet")]
     public Estimate Feet { get; set; }
+
+    public override string ToString()
+    {
+        return $"EstimatedDiameter: ((Kilometers: {Kilometers}); (Meters: {Meters}); " +
+            $"(Miles: {Miles}); (Feet: {Feet}))";
+    }
 }

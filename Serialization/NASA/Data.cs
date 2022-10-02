@@ -1,5 +1,5 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace Serialization.NASA;
 
@@ -22,4 +22,11 @@ public class Data
 
     [JsonProperty("orbiting_body")]
     public string OrbitingBody { get; set; }
+
+    public override string ToString()
+    {
+        return $"Data: ((ApproachDate: {ApproachDate}); (ApproachFullDate: {ApproachFullDate}); " +
+            $"(ApproachEpoch: {ApproachEpoch}); (RelativeVelocity: {Velocity}); " +
+            $"(MissDistance: {MissDistance}); (OrbitingBody: {OrbitingBody}))";
+    }
 }

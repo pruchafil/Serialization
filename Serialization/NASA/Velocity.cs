@@ -12,4 +12,10 @@ public class Velocity
 
     [JsonProperty("miles_per_hour")]
     public double MilesPerHour { get; set; }
+
+    public override string ToString()
+    {
+        return $"Velocity: ((KilometersPerSecond: {KilometersPerSecond}); " +
+            $"(KilometersPerHour: {KilometersPerHour}); (MilesPerHour: {MilesPerHour}))";
+    }
 }
