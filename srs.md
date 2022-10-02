@@ -51,12 +51,23 @@ https://api.nasa.gov/
 ## 2. Overall Description
 ### 2.1 Product Perspective
 
-
+The software stores information about space objects. It stores their number, ID, Neo reference ID, name, magnitude, an estimate of the object's diameter, whether the object is potentially dangerous, close approach data and minor additional information. It also stores information about the regularity of data updates and the selected colour display mode (dark or light mode). All data is stored in JSON format.
 
 ### 2.2 Product Functions
+
+The main functionality of the program is to enter a letter input into a text field. This letter input will then be used when searching for information about objects in written form. When a text input is entered, the result found will automatically be displayed below the text box.
+
 ### 2.3 User Classes and Characteristics
+
+There is no need to split users into groups, they will all have the same permissions.
+
 ### 2.4 Operating Environment
+
+Mobile phone with Android operation system.
+
 ### 2.5 Design and Implementation Constraints
+
+
 ### 2.6 Assumptions and Dependencies
 ## 3. External Interface Requirements
 ### 3.1 User Interfaces
