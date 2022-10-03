@@ -17,14 +17,8 @@
   * 3.1 [User Interfaces](#31-user-interfaces)
   * 3.2 [Hardware Interfaces](#32-hardware-interfaces)
   * 3.3 [Software Interfaces](#33-software-interfaces)
-  * 3.4 [Communication Interfaces](#34-communication-interfaces)
 * 4 [System Features](#4-system-features)
-  * 4.1 [Functional Requirements](#41-functional-requirements)
-* 5 [Nonfunctional Requirements](#5-nonfunctional-requirements)
-  * 5.1 [Performance Requirements](#51-performance-requirements)
-  * 5.2 [Safety Requirements](#52-safety-requirements)
-  * 5.3 [Security Requirements](#53-security-requirements)
-  * 5.4 [Software Quality Attributes](#54-software-quality-attributes)
+  * 4.1 [Functional Requirements](#41-functional-requirments)
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -33,6 +27,7 @@ The purpose of this document is to develop software to retrieve information abou
 
 ### 1.2 Document Conventions
 
+`This message will be displayed on your mobile phone screen.`
 
 ### 1.3 Intended Audience
 
@@ -67,17 +62,110 @@ Mobile phone with Android operation system.
 
 ### 2.5 Design and Implementation Constraints
 
+For file storage, it is necessary to store these files in JSON format in a specific location that Android supports.
 
 ### 2.6 Assumptions and Dependencies
+
+It is assumed that the user will have a phone powerful enough to handle more demanding search results. It is also assumed that the user will have access to an internet connection.
+
 ## 3. External Interface Requirements
 ### 3.1 User Interfaces
+
+Jednoduché rozložení, jehož hlavní složka je textové pole pro uživatelský vstup a textové pole pro zobrazení výsledků hledání, jež uživatel zadal do prvního pole. V horní části je ikona zubatého kola pro zobrazení dalších možností, ve kterých je možnost nastavit světlý nebo tmavý režim zobrazení, četnost aktualizací, manuální aktualizaci a zobrazení všech informací v dobře čitelném formátu.
+
 ### 3.2 Hardware Interfaces
+
+N/A
+
 ### 3.3 Software Interfaces
-### 3.4 Communication Interfaces
+
+N/A
+
 ## 4. System Features
 ### 4.1 Functional Requirments
-## 5. Nonfunctional Requirements
-### 5.1 Performance Requirements
-### 5.2 Safety Requirements
-### 5.3 Security Requirements
-### 5.4 Software Quality Attributes
+
+#### 4.1.1 Text Input
+
+Purpose:
+
+Information lookup.
+
+Inputs:
+
+Input is via the on-screen keyboard.
+
+Processing:
+
+The input is stored and used as a search argument. The search attempts to find any mention of the current input and retrieves all objects that have that mention.
+
+Outputs:
+
+All objects that have been marked as correct by the search via a mention from user input. These objects are listed in a formatted text layout that can be scrolled through for a broader list.
+
+#### 4.1.2 Dark and light mode switching
+
+Purpose:
+
+A better and more pleasant view.
+
+Inputs:
+
+Button click.
+
+Processing:
+
+Clicking the button switches the mode and saves this information for future application launches.
+
+Outputs:
+
+Button is checked or unchecked. Background colour.
+
+#### 4.1.3 Auto update switch
+
+Purpose:
+
+Provide updated information.
+
+Inputs:
+
+Button click.
+
+Processing:
+
+Clicking the button switches the mode and saves this information for future application launches. All information will be updated every time the application is launched.
+
+Outputs:
+
+Button is checked or unchecked.
+
+#### 4.1.4 Force update
+
+Purpose:
+
+Provide updated information.
+
+Inputs:
+
+Button click.
+
+Processing:
+
+Clicking the button will update all the information.
+
+Outputs:
+
+`Updated` or `Failed`
+
+#### 4.1.5 Show information
+
+Purpose:
+Data structure display.
+
+Inputs:
+Button click.
+
+Processing:
+The entire JSON file will be read, parsed into data structures and converted to text.
+
+Outputs:
+All objects are listed in a formatted text layout that can be scrolled through for a broader list.
