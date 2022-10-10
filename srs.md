@@ -71,7 +71,7 @@ It is assumed that the user will have a phone powerful enough to handle more dem
 ## 3. External Interface Requirements
 ### 3.1 User Interfaces
 
-Jednoduché rozložení, jehož hlavní složka je textové pole pro uživatelský vstup a textové pole pro zobrazení výsledků hledání, jež uživatel zadal do prvního pole. V horní části je ikona zubatého kola pro zobrazení dalších možností, ve kterých je možnost nastavit světlý nebo tmavý režim zobrazení, četnost aktualizací, manuální aktualizaci a zobrazení všech informací v dobře čitelném formátu.
+A simple layout whose main component is a text field for user input and a text field for displaying the search results that the user has entered in the first field. At the top is a jagged wheel icon to display additional options, which include the ability to set light or dark display mode, update frequency, manual update, and display all information in an easy-to-read format.
 
 ### 3.2 Hardware Interfaces
 
