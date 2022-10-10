@@ -33,7 +33,6 @@ The purpose of this document is to develop software to retrieve information abou
 
 ### 1.4 References
 
-
 https://github.com/pruchafil/Serialization
 
 https://api.nasa.gov/
