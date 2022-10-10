@@ -35,7 +35,7 @@ This project is suitable for all people who are interested in potentially danger
 
 ### 1.4 Project Scope
 
-Účel tohoto softwaru je poskytnout přehledné a jednoduché vyhledávání pravidělně aktualizovaných informací o vesmírných objektech, které by mohly být potencionálně pro Zemi nebezpečné. Software umožňuje zobrazit přehledně formátované informace pro celkové zobrazení či vyhledávat konkrétní klíčová slova.
+The purpose of this software is to provide a clear and simple search for regularly updated information on space objects that could be potentially dangerous to Earth. The software allows you to display clearly formatted information for an overall view or to search for specific keywords.
 
 ### 1.5 References
 
