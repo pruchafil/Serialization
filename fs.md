@@ -1,5 +1,9 @@
 # Functional Specification
 
+Version 0.1
+Prepared by Filip Průcha
+October 11, 2022
+
 * 1 [Introduction](#1-introduction)
   * 1.1 [Purpose](#11-purpose)
   * 1.2 [Document Conventions](#12-document-conventions)
