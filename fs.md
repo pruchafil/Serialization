@@ -10,7 +10,7 @@ October 11, 2022
   * 1.1 [Purpose](#11-purpose)
   * 1.2 [Document Conventions](#12-document-conventions)
   * 1.3 [For whom the document is intended](#13-for-whom-the-document-is-intended)
-  * 1.4 [References](#15-references)
+  * 1.4 [References](#14-references)
 * 2 [Scenarios](#2-scenarios)
   * 2.1 [all-realistic-uses](#21-all-realistic-uses)
   * 2.2 [Types of user roles](#22-types-of-user-roles)
