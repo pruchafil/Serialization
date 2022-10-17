@@ -71,7 +71,7 @@ When the application is launched, the data will be updated depending on whether 
 
 ### 3.2 Main modules
 
-The application has three main modules: the main search module, the settings module and the data display module.
+![hfg](https://user-images.githubusercontent.com/84292851/196268474-8a68bebb-9fd8-448b-8bdb-97ea3ea4d90b.png)
 
 ### 3.3 All the details: screens, windows, prints, error messages, logging
 
