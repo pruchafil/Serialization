@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>19be8640-1e92-429e-ba3a-3772624e8869</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SerializationLogic</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)HttpResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\Config.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\Distance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\Estimate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\EstimatedDiameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\Link.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\Links.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\NearbyObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\NearbyObjectHolder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\Objects.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonModels\NASA\Velocity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ObjectsFiltering\FilterProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ObjectsFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SaveSystem\ConfigLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SaveSystem\DataLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SaveSystem\ILoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)json1.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

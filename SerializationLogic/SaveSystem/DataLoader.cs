@@ -8,8 +8,8 @@ namespace Serialization.SaveSystem
     public class DataLoader : ILoader<Objects>
     {
         private static DataLoader _self;
-        private Objects _data;
-        private bool _outDated;
+        private Objects           _data;
+        private bool              _outDated;
 
         public static DataLoader Self
         {

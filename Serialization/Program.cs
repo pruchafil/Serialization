@@ -1,15 +1,16 @@
 ﻿using System;
 
-namespace Serialization;
-
-internal class Program
+namespace Serialization
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        Starter r = new();
-        r.Run();
+        private static void Main(string[] args)
+        {
+            Starter r = new Starter();
+            r.Run();
 
-        while (true)
-            Console.ReadKey();
+            while (true)
+                Console.ReadKey();
+        }
     }
 }

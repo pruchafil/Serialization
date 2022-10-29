@@ -1,23 +1,24 @@
 ﻿using Newtonsoft.Json;
 using Serialization.JsonModels.NASA;
 
-namespace Serialization;
-
-internal class Starter
+namespace Serialization
 {
-    internal void Run()
+    internal class Starter
     {
-        Proceed();
-    }
+        internal void Run()
+        {
+            Proceed();
+        }
 
-    private async void Proceed()
-    {
-        string str = await HttpResolver.Get();
+        private async void Proceed()
+        {
+            string str = await HttpResolver.Get();
 
-        Objects o = JsonConvert.DeserializeObject<Objects>(str);
+            Objects o = JsonConvert.DeserializeObject<Objects>(str);
 
-        System.Console.WriteLine(o.ToFormattedString().ToString());
+            System.Console.WriteLine(o.ToFormattedString().ToString());
 
-        //str = JsonConvert.SerializeObject(o, Formatting.Indented);
+            //str = JsonConvert.SerializeObject(o, Formatting.Indented);
+        }
     }
 }

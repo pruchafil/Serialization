@@ -8,10 +8,8 @@ namespace Serialization.SaveSystem
     public class ConfigLoader : ILoader<Config>
     {
         private static ConfigLoader _self;
-
-        private Config _data;
-
-        private bool _outDated;
+        private Config              _data;
+        private bool                _outDated;
 
         public static ConfigLoader Self
         {

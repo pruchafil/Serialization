@@ -4,7 +4,7 @@
              x:Class="SerializationViewer.MainPage">
 
     <StackLayout>
-        <Entry HorizontalOptions="Center" Margin="10"/>
-        <InputView IsReadOnly="True" HorizontalOptions="Center" Margin="10" VerticalOptions="Fill"/>
+        <Entry x:Name="entry_input" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="10" TextChanged="Entry_TextChanged"/>
+        <Editor x:Name="editor_output" IsReadOnly="True" HorizontalOptions="Fill" Margin="10" VerticalOptions="Fill" />
     </StackLayout>
 </ContentPage>
