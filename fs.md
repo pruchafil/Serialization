@@ -79,7 +79,7 @@ If an error occurs during the update, an `Failed` is displayed on the screen. If
 
 ### 3.4 All possible program flows and their manifestations
 
-https://www.figma.com/file/Fp9AVaoCV1F0RI7I60iczU/Serialization?node-id=0%3A1
+https://www.figma.com/proto/Fp9AVaoCV1F0RI7I60iczU/Serialization?node-id=4%3A30&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=4%3A30
 
 One flow of the program is to automatically run the update when the program starts and then display the search layout. The other flow is an error for this update, whereby the update will be skipped and work with outdated data. The last option is similar to the second, whereby this update will be skipped altogether.
 
