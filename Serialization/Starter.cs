@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Serialization.NASA;
+using Serialization.JsonModels.NASA;
 
 namespace Serialization;
 
@@ -14,12 +14,10 @@ internal class Starter
     {
         string str = await HttpResolver.Get();
 
-        NASA.Objects o = JsonConvert.DeserializeObject<NASA.Objects>(str);
+        Objects o = JsonConvert.DeserializeObject<Objects>(str);
 
-        var objectstr = o.ToString();
-        Objects.ToFormattedString(objectstr);
+        System.Console.WriteLine(o.ToFormattedString().ToString());
 
         //str = JsonConvert.SerializeObject(o, Formatting.Indented);
-
     }
 }

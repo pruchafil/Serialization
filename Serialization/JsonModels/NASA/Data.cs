@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Serialization.NASA;
+namespace Serialization.JsonModels.NASA;
 
 public class Data
 {

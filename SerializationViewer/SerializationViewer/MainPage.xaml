@@ -4,7 +4,7 @@
              x:Class="SerializationViewer.MainPage">
 
     <StackLayout>
-        
+        <Entry HorizontalOptions="Center" Margin="10"/>
+        <InputView IsReadOnly="True" HorizontalOptions="Center" Margin="10" VerticalOptions="Fill"/>
     </StackLayout>
-
 </ContentPage>

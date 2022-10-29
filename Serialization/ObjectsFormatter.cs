@@ -1,21 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using Serialization.JsonModels.NASA;
 using System;
 using System.Text;
 
-namespace Serialization.NASA;
+namespace Serialization;
 
-class Objects
+public static class ObjectsFormatter
 {
-    [JsonProperty("links")]
-    public Links Links { get; set; }
-
-    [JsonProperty("element_count")]
-    public int Count { get; set; }
-
-    [JsonProperty("near_earth_objects")]
-    public NearbyObjectHolder NearEarthObjects { get; set; }
-
-    public static ReadOnlySpan<char> ToFormattedString(Object obj)
+    public static ReadOnlySpan<char> ToFormattedString(this Objects obj)
     {
         var str = obj.ToString();
         int space = 0;
@@ -63,10 +54,5 @@ class Objects
         }
 
         return sb.ToString().AsSpan();
-    }
-
-    public override string ToString()
-    {
-        return $"Objects: ((Links: {Links}); (Count: {Count}); (NearEarthObjects: {NearEarthObjects}))";
     }
 }

@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
-using System.Linq;
 
-namespace Serialization.NASA;
+namespace Serialization.JsonModels.NASA;
 
-class NearbyObject
+public class NearbyObject
 {
     [JsonProperty("links")]
     public Link Links { get; set; }

@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Serialization.NASA;
+namespace Serialization.JsonModels.NASA;
 
-internal class NearbyObjectHolder
+public class NearbyObjectHolder
 {
     [JsonProperty("2015-09-08")]
     public NearbyObject[] _2015_09_08 { get; set; }

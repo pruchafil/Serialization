@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Serialization.NASA;
+namespace Serialization.JsonModels.NASA;
 
-class Link
+public class Link
 {
     [JsonProperty("self")]
     public string Self { get; set; }
