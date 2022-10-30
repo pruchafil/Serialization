@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SerializationViewer.Loader">
     <ContentPage.Content>
-        <StackLayout>
-            
-        </StackLayout>
+        <Grid BackgroundColor="Black">
+            <Image Source="earth.jpg" Aspect="AspectFill"/>
+            <ActivityIndicator Color="White" IsRunning="True" VerticalOptions="Center"/>
+            <Label x:Name="label_state" TextColor="White" VerticalOptions="End" HorizontalTextAlignment="Center" Text="Initialization" FontSize="Small" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

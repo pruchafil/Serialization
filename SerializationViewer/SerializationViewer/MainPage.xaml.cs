@@ -4,17 +4,11 @@ namespace SerializationViewer
 {
     public partial class MainPage : ContentPage
     {
+        private const int range = 7000;
+
         public MainPage()
         {
             InitializeComponent();
-
-            Load();
-        }
-
-        private async void Load()
-        {
-            Loader loader = new Loader();
-            await Navigation.PushModalAsync(loader);
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
@@ -22,16 +16,16 @@ namespace SerializationViewer
             (int index, string text) = Serialization.ObjectsFiltering.FilterProvider.FilterFind(entry_input.Text);
 
             if (index == -1)
-                editor_output.Text = "No results were found.";
+                label_output.Text = "No results were found.";
             else
             {
-                var str = text.Substring
-                (
-                    index >= 100 ? index - 100 : 0,
-                    index + 100 >= text.Length ? text.Length - index : 100
-                );
+                int from = index - (range / 2) < 0 ? 0 : index - (range / 2);
+                int len = from + range >= text.Length ? text.Length - from : range;
 
-                editor_output.Text = str;
+                var str = text.Substring(from, len);
+                label_output.Text = str;
+
+                scroll.ScrollToAsync(scroll.ScrollX, label_output.Height / 2, true);
             }
         }
     }

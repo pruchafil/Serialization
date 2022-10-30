@@ -5,6 +5,10 @@
 
     <StackLayout>
         <Entry x:Name="entry_input" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="10" TextChanged="Entry_TextChanged"/>
-        <Editor x:Name="editor_output" IsReadOnly="True" HorizontalOptions="Fill" Margin="10" VerticalOptions="Fill" />
+        <Editor x:Name="editor_output" IsReadOnly="True" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Margin="10" FontSize="Micro" />
+        <ScrollView x:Name="scroll">
+            <Label x:Name="label_output" LineBreakMode="WordWrap" Margin="10" FontSize="Micro"/>
+        </ScrollView>
+        
     </StackLayout>
 </ContentPage>

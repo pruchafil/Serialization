@@ -8,7 +8,7 @@ namespace SerializationViewer
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Loader();
         }
 
         protected override void OnStart()

@@ -8,7 +8,8 @@ namespace Serialization.ObjectsFiltering
         public static (int, string) FilterFind(String term)
         {
             var formatted = DataLoader.Self.Data.ToFormattedString();
-            int index     = formatted.IndexOf(term.Trim());
+            var formattedLower = DataLoader.Self.Data.ToFormattedString().ToLower();
+            int index     = formattedLower.IndexOf(term.ToLower());
 
             return index == -1 ? (-1, null) : (index, formatted);
         }

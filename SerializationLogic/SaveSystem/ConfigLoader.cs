@@ -72,6 +72,8 @@ namespace Serialization.SaveSystem
                 AutoUpdate = true,
                 DarkMode = true
             };
+
+            Update(config);
         }
 
         private Config Load()
