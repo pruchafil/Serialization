@@ -3,10 +3,10 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>19be8640-1e92-429e-ba3a-3772624e8869</SharedGUID>
+    <SharedGUID>d09e0d75-5e74-4948-a59a-c8b90aacae3c</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>SerializationLogic</Import_RootNamespace>
+    <Import_RootNamespace>Serialization</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)HttpResolver.cs" />
@@ -28,8 +28,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)SaveSystem\ILoader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)json1.json">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
+    <Content Include="$(MSBuildThisFileDirectory)json1.json" />
   </ItemGroup>
 </Project>

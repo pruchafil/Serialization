@@ -8,8 +8,8 @@ namespace Serialization.SaveSystem
     public class DataLoader : ILoader<Objects>
     {
         private static DataLoader _self;
-        private Objects _data;
-        private bool _outDated;
+        private Objects           _data;
+        private bool              _outDated;
 
         public static DataLoader Self
         {
@@ -51,12 +51,19 @@ namespace Serialization.SaveSystem
             _data     = default;
         }
 
-        internal void Update(Objects config)
+        public void Update(Objects config)
         {
             _outDated = true;
 
             string str = JsonConvert.SerializeObject(config, Formatting.Indented);
             File.WriteAllText(Path, str);
+        }
+
+        public void Update(string jsonString)
+        {
+            _outDated = true;
+
+            File.WriteAllText(Path, jsonString);
         }
 
         /// <summary>

@@ -22,5 +22,5 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <Import Project="..\..\SerializationLogic\SerializationLogic.projitems" Label="Shared" />
+  <Import Project="..\..\Serialization\Serialization.projitems" Label="Shared" />
 </Project>

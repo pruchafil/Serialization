@@ -1,20 +1,21 @@
 ﻿using Newtonsoft.Json;
 
-namespace Serialization.JsonModels.NASA;
-
-public class Objects
+namespace Serialization.JsonModels.NASA
 {
-    [JsonProperty("links")]
-    public Links Links { get; set; }
-
-    [JsonProperty("element_count")]
-    public int Count { get; set; }
-
-    [JsonProperty("near_earth_objects")]
-    public NearbyObjectHolder NearEarthObjects { get; set; }
-
-    public override string ToString()
+    public class Objects
     {
-        return $"Objects: ((Links: {Links}); (Count: {Count}); (NearEarthObjects: {NearEarthObjects}))";
+        [JsonProperty("links")]
+        public Links Links { get; set; }
+
+        [JsonProperty("element_count")]
+        public int Count { get; set; }
+
+        [JsonProperty("near_earth_objects")]
+        public NearbyObjectHolder NearEarthObjects { get; set; }
+
+        public override string ToString()
+        {
+            return $"Objects: ((Links: {Links}); (Count: {Count}); (NearEarthObjects: {NearEarthObjects}))";
+        }
     }
 }

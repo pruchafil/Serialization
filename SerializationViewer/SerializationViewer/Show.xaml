@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SerializationViewer.Show">
+    <ContentPage.Content>
+        <StackLayout>
+            <ImageButton x:Name="close" Source="arrow.png" Clicked="Close_Clicked"/>
+            <Editor x:Name="editor" IsSpellCheckEnabled="False" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Margin="5"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

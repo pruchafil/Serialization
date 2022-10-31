@@ -1,32 +1,30 @@
 ﻿using Serialization.JsonModels;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace SerializationViewer
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Loader : ContentPage
-	{
-        private const string dataLoad  = "Downloading data.";
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Loader : ContentPage
+    {
+        private const string dataLoad = "Downloading data.";
         private const string styleLoad = "Downloading styles.";
         private const string completed = "Downloading styles.";
         private volatile bool _update = true;
-        private volatile List<string> _loading = new List<string>();
+        private readonly List<string> _loading = new List<string>();
 
-		public Loader ()
-		{
-			InitializeComponent();
+        public Loader()
+        {
+            InitializeComponent();
 
-			Load();
+            Load();
             Update();
         }
 
         private async void Load()
-		{
+        {
             var config = Serialization.SaveSystem.ConfigLoader.Self.Data;
 
             _loading.Add(dataLoad);
@@ -34,16 +32,16 @@ namespace SerializationViewer
             _loading.Add(styleLoad);
             var task2 = Task.Run(() => InitStyles(config));
 
-			await task1;
+            await task1;
             _loading.Remove(dataLoad);
-			await task2;
+            await task2;
             _loading.Remove(styleLoad);
 
             _loading.Add(completed);
             _update = false;
 
             await Navigation.PushModalAsync(new MainPage());
-		}
+        }
 
         private async void Update()
         {
@@ -52,14 +50,14 @@ namespace SerializationViewer
                 if (_loading.Count == 0)
                     label_state.Text = "...";
                 else
-                    label_state.Text = _loading[0];
+                    label_state.Text = string.Join(" ", _loading);
 
                 await Task.Delay(10);
             }
         }
 
-		private async Task InitData(Config config)
-		{
+        private async Task InitData(Config config)
+        {
             if (config.AutoUpdate)
             {
                 string jsonStr = await Serialization.HttpResolver.Get();
@@ -67,18 +65,18 @@ namespace SerializationViewer
             }
         }
 
-		private void InitStyles(Config config)
-		{
-			Color backgroundColor, textColor;
+        private void InitStyles(Config config)
+        {
+            Color backgroundColor, textColor;
 
 
             if (config.DarkMode)
-			{
+            {
                 backgroundColor = Color.Black;
-				textColor = Color.White;
+                textColor = Color.White;
             }
-			else
-			{
+            else
+            {
                 backgroundColor = Color.White;
                 textColor = Color.Black;
             }

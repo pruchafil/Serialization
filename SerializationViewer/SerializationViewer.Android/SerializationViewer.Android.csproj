@@ -86,7 +86,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrow.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SerializationViewer\SerializationViewer.csproj">
       <Project>{40EDA69B-CB0A-4FB8-B4EE-F2B129F33D2D}</Project>

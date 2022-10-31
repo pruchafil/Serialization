@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SerializationViewer.Settings">
+    <ContentPage.Content>
+        <StackLayout>
+            <ImageButton x:Name="close" Source="arrow.png" Clicked="Close_Clicked"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Dark mode" HorizontalOptions="Start"/>
+                <CheckBox x:Name="checkbox_darkmode" HorizontalOptions="End"/>                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Auto update" HorizontalOptions="Start"/>
+                <CheckBox x:Name="checkbox_autoupdate" HorizontalOptions="End"/>
+            </StackLayout>
+            <Button Text="Force update" Clicked="Button_Update_Clicked"/>
+            <Button Text="Show data" Clicked="Button_Show_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

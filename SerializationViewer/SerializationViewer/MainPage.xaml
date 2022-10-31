@@ -4,11 +4,19 @@
              x:Class="SerializationViewer.MainPage">
 
     <StackLayout>
+        <ImageButton Clicked="ImageButton_Show_Clicked"></ImageButton>
         <Entry x:Name="entry_input" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="10" TextChanged="Entry_TextChanged"/>
-        <Editor x:Name="editor_output" IsReadOnly="True" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Margin="10" FontSize="Micro" />
+
         <ScrollView x:Name="scroll">
-            <Label x:Name="label_output" LineBreakMode="WordWrap" Margin="10" FontSize="Micro"/>
+            <Label x:Name="label_output">
+                <Label.FormattedText>
+                    <FormattedString>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </ScrollView>
         
+        
+
     </StackLayout>
 </ContentPage>

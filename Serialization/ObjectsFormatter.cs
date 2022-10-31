@@ -1,58 +1,60 @@
 ﻿using Serialization.JsonModels.NASA;
 using System;
+using System.Collections.Generic;
 using System.Text;
 
-namespace Serialization;
-
-public static class ObjectsFormatter
+namespace Serialization
 {
-    public static ReadOnlySpan<char> ToFormattedString(this Objects obj)
+    public static class ObjectsFormatter
     {
-        var str = obj.ToString();
-        int space = 0;
-
-        StringBuilder sb = new();
-
-        foreach (var item in str)
+        public static String ToFormattedString(this Objects obj)
         {
-            if (item is '(')
+            var str = obj.ToString();
+            int space = 0;
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var item in str)
             {
-                sb.Append(Environment.NewLine);
-
-                for (int i = 0; i < space; i++)
+                if (item is '(')
                 {
-                    sb.Append(' ');
+                    sb.Append(Environment.NewLine);
+
+                    for (int i = 0; i < space; i++)
+                    {
+                        sb.Append(' ');
+                    }
+
+                    sb.Append(item);
+                    sb.Append(Environment.NewLine);
+
+                    space += 4;
+
+                    for (int i = 0; i < space; i++)
+                    {
+                        sb.Append(' ');
+                    }
                 }
-
-                sb.Append(item);
-                sb.Append(Environment.NewLine);
-
-                space += 4;
-
-                for (int i = 0; i < space; i++)
+                else if (item is ')')
                 {
-                    sb.Append(' ');
+                    sb.Append(Environment.NewLine);
+
+                    space -= 4;
+
+                    for (int i = 0; i < space; i++)
+                    {
+                        sb.Append(' ');
+                    }
+
+                    sb.Append(item);
+                }
+                else
+                {
+                    sb.Append(item);
                 }
             }
-            else if (item is ')')
-            {
-                sb.Append(Environment.NewLine);
 
-                space -= 4;
-
-                for (int i = 0; i < space; i++)
-                {
-                    sb.Append(' ');
-                }
-
-                sb.Append(item);
-            }
-            else
-            {
-                sb.Append(item);
-            }
+            return sb.ToString();
         }
-
-        return sb.ToString().AsSpan();
     }
 }

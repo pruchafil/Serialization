@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationViewer.Android
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerializationViewer", "SerializationViewer\SerializationViewer\SerializationViewer.csproj", "{B2E9AF6D-193C-4E7C-9782-2FF5539CB129}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Serialization", "SerializationLogic\Serialization.shproj", "{19BE8640-1E92-429E-BA3A-3772624E8869}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Serialization", "Serialization\Serialization.shproj", "{D09E0D75-5E74-4948-A59A-C8B90AACAE3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,7 +33,7 @@ Global
 		SolutionGuid = {E3D29201-49A8-4AAF-AA4D-7FC1CC1B62EF}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		SerializationLogic\SerializationLogic.projitems*{19be8640-1e92-429e-ba3a-3772624e8869}*SharedItemsImports = 13
-		SerializationLogic\SerializationLogic.projitems*{b2e9af6d-193c-4e7c-9782-2ff5539cb129}*SharedItemsImports = 5
+		Serialization\Serialization.projitems*{b2e9af6d-193c-4e7c-9782-2ff5539cb129}*SharedItemsImports = 5
+		Serialization\Serialization.projitems*{d09e0d75-5e74-4948-a59a-c8b90aacae3c}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
