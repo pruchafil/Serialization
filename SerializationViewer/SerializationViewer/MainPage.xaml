@@ -4,7 +4,7 @@
              x:Class="SerializationViewer.MainPage">
 
     <StackLayout>
-        <ImageButton Clicked="ImageButton_Show_Clicked"></ImageButton>
+        <ImageButton Source="gear.png" HeightRequest="30" WidthRequest="30" Margin="3" HorizontalOptions="End" Clicked="ImageButton_Show_Clicked"/>
         <Entry x:Name="entry_input" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="10" TextChanged="Entry_TextChanged"/>
 
         <ScrollView x:Name="scroll">

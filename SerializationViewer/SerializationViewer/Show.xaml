@@ -4,8 +4,10 @@
              x:Class="SerializationViewer.Show">
     <ContentPage.Content>
         <StackLayout>
-            <ImageButton x:Name="close" Source="arrow.png" Clicked="Close_Clicked"/>
-            <Editor x:Name="editor" IsSpellCheckEnabled="False" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Margin="5"/>
+            <ImageButton Source="arrow.png" HeightRequest="30" WidthRequest="30" Margin="3" HorizontalOptions="Start" Clicked="Close_Clicked"/>
+            <ScrollView>
+                <Label x:Name="label" LineBreakMode="WordWrap" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Margin="5"/>                
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

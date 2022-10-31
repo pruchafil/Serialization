@@ -12,9 +12,18 @@ namespace SerializationViewer
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Settings : ContentPage
     {
+        private readonly bool _init;
+
         public Settings()
         {
             InitializeComponent();
+
+            _init = true;
+
+            checkbox_autoupdate.IsChecked = Serialization.SaveSystem.ConfigLoader.Self.Data.AutoUpdate;
+            checkbox_darkmode.IsChecked = Serialization.SaveSystem.ConfigLoader.Self.Data.DarkMode;
+
+            _init = false;
         }
 
         private async void Button_Update_Clicked(object sender, EventArgs e)
@@ -44,6 +53,20 @@ namespace SerializationViewer
         private async void Close_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+        }
+
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if (_init)
+                return;
+
+            Serialization.JsonModels.Config c = new Serialization.JsonModels.Config
+            {
+                AutoUpdate = checkbox_autoupdate.IsChecked,
+                DarkMode = checkbox_darkmode.IsChecked
+            };
+
+            Serialization.SaveSystem.ConfigLoader.Self.Update(c);
         }
     }
 }

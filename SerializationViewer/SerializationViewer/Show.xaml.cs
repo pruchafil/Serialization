@@ -10,7 +10,7 @@ namespace SerializationViewer
         {
             InitializeComponent();
 
-            editor.Text = Serialization.SaveSystem.DataLoader.Self.Data.ToString();
+            label.Text = Serialization.SaveSystem.DataLoader.Self.Data.ToString();
         }
 
         private async void Close_Clicked(object sender, System.EventArgs e)
