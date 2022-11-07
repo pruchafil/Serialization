@@ -4,7 +4,8 @@
              x:Class="SerializationViewer.Settings">
     <ContentPage.Content>
         <StackLayout>
-            <ImageButton x:Name="close" Source="arrow.png" HeightRequest="30" WidthRequest="30" Margin="3" HorizontalOptions="Start" Clicked="Close_Clicked"/>
+            <ImageButton x:Name="close" Source="arrow.png" HeightRequest="30" WidthRequest="30" Margin="3" 
+                         HorizontalOptions="Start" BackgroundColor="White" Clicked="Close_Clicked"/>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Dark mode" HorizontalOptions="Start"/>
                 <CheckBox x:Name="checkbox_darkmode" HorizontalOptions="End" CheckedChanged="CheckBox_CheckedChanged"/>                

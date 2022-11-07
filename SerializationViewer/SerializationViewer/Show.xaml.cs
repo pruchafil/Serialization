@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Serialization;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SerializationViewer
@@ -10,7 +11,14 @@ namespace SerializationViewer
         {
             InitializeComponent();
 
-            label.Text = Serialization.SaveSystem.DataLoader.Self.Data.ToString();
+            label.Text = Serialization.SaveSystem.DataLoader.Self.Data.ToFormattedString();
+
+            GlobalStyles.ChangeStyle(this);
+        }
+
+        protected override void OnAppearing()
+        {
+            GlobalStyles.ChangeStyle(this);
         }
 
         private async void Close_Clicked(object sender, System.EventArgs e)

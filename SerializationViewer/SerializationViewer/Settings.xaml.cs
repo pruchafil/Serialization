@@ -26,6 +26,11 @@ namespace SerializationViewer
             _init = false;
         }
 
+        protected override void OnAppearing()
+        {
+            GlobalStyles.ChangeStyle(this);
+        }
+
         private async void Button_Update_Clicked(object sender, EventArgs e)
         {
             string update = null;

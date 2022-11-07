@@ -4,7 +4,8 @@
              x:Class="SerializationViewer.Show">
     <ContentPage.Content>
         <StackLayout>
-            <ImageButton Source="arrow.png" HeightRequest="30" WidthRequest="30" Margin="3" HorizontalOptions="Start" Clicked="Close_Clicked"/>
+            <ImageButton Source="arrow.png" HeightRequest="30" WidthRequest="30" Margin="3"
+                         BackgroundColor="White" HorizontalOptions="Start" Clicked="Close_Clicked"/>
             <ScrollView>
                 <Label x:Name="label" LineBreakMode="WordWrap" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Margin="5"/>                
             </ScrollView>

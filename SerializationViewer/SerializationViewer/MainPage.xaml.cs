@@ -17,6 +17,11 @@ namespace SerializationViewer
             _cancellationTokenSource = new CancellationTokenSource();
         }
 
+        protected override void OnAppearing()
+        {
+            GlobalStyles.ChangeStyle(this);
+        }
+
         private async void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (_task == null)
